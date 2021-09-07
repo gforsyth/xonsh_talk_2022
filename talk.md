@@ -142,27 +142,6 @@ I'm so glad you asked.
 Am I done making slides?
 ]
 ---
-# A brief history
-
-.left-column[
-  ## Who
-  ## What
-  ## Why
-]
-.right-column[
-]
----
-# A brief history
-
-.left-column[
-  ## Who
-  ## What
-  ## Why
-  ## How
-]
-.right-column[
-]
----
 # Exeunt
 
 ## Installation
