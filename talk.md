@@ -39,7 +39,7 @@ Current active maintainers: @daniel-shimon, @gforsyth
 How many users do we have?
 
 Very hard to measure.  We average around 12-13k downloads a month on PyPI.
-(but also, conda-forge, CI, shell update frequency, so who knows?`)
+(but also, conda-forge, CI, shell update frequency, so who knows?)
 
 ]
 ---
@@ -66,7 +66,6 @@ Who here uses something else?
 .right-column[
 Huh?  What are you talking about?
 ]
---
 
 ---
 # Getting to know [not you]
