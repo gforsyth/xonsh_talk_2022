@@ -87,7 +87,12 @@ This would seem to indicate that $PATH is a colon delimited string of paths, but
 
 ```
 $PATH
+$PATH.reverse()
+$PATH
+$PATH.reverse()
+$PATH
 $PATH.pop(0)
+$PATH
 $PATH.insert(0, "/opt/miniconda/bin")
 ```
 
@@ -125,6 +130,36 @@ or maybe `grep` is simpler?  It's up to you!
 cap = $(ls | grep)
 cap.split()
 ```
+
+# Command Pipeline
+
+There's another kind of capture available in `xonsh` that returns more
+information about the command you've run
+
+```
+cap = !(ls)
+```
+
+```
+type(cap)
+```
+
+```
+cap.returncode
+cap.output
+```
+
+And it's a truthy object! so you can use it for control flow:
+
+```
+if !(ls | grep ICO):
+    print("There's an uppercase ICO in this directory")
+mv favicon.ico favicon.ICO
+if !(ls | grep ICO):
+    print("There's an uppercase ICO in this directory")
+mv favicon.ICO favicon.ico
+```
+
 
 # Aliases
 
@@ -172,6 +207,10 @@ ls -l
 
 2. Use quotes to escape, not backslashes
 
+```
+mkdir "a dir with spaces"
+```
+
 3. Use the letter `x` everywhere
 
 # Fun stuff
@@ -181,8 +220,18 @@ with ${...}.swap({"PATH": $PATH[1:]}):
 ```
 
 ```
+import getpass
+with ${...}.swap({"USERPASS": getpass.getpass()}):
+    echo $USERPASS
+$USERPASS
+with ${...}.swap({"USERPASS": getpass.getpass()}):
+    pass
+```
+
+```
 # p-strings!
 p = p"."
+p.absolute()
 
 # pf-strings!
 user = "gil"
