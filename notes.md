@@ -243,6 +243,16 @@ p = pf"/home/{user}"
 g`a*`
 ```
 
+```
+$PROMPT
+$PROMPT_FIELDS
+
+import random
+$PROMPT_FIELDS["rand"] = lambda: random.randint(0, 50)
+$PROMPT += " {rand} "
+$PROMPT = $PROMPT[:-8]
+```
+
 # If there's time
 
 A brief tour of my repo jumper utility.
