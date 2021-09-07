@@ -194,6 +194,9 @@ p = pf"/home/{user}"
 g`a*`
 ```
 
+# If there's time
+
+A brief tour of my repo jumper utility.
 
 # Other stuff
 
