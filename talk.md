@@ -4,7 +4,9 @@ class: center, middle, inverse
 
 A Python-powered, bashwards-learning shell
 
-![](/ascii_conch_part_transparent_tight.png)
+![](./ascii_conch_part_transparent_tight.png)
+
+https://gforsyth.github.io/xonsh_austin_meetup_talk_2021/
 ---
 layout: false
 # Getting to know [me]
@@ -14,7 +16,7 @@ layout: false
 .right-column[
 Gil Forsyth, I work for a company*
 
-![](/GitHub-Mark-32px.png) gforsyth
+![](./GitHub-Mark-32px.png) gforsyth
 
 Contributing and maintaining `xonsh` since 2015
 
