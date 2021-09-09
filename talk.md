@@ -2,7 +2,7 @@ class: center, middle, inverse
 
 # xonsh
 
-A Python-powered, bashwards-learning shell
+A Python-powered, bashwards-leaning, cross-platform shell
 
 ![](./ascii_conch_part_transparent_tight.png)
 
