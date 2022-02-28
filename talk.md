@@ -6,7 +6,7 @@ A Python-powered, bashwards-leaning, cross-platform shell
 
 ![](./ascii_conch_part_transparent_tight.png)
 
-https://gforsyth.github.io/xonsh_austin_meetup_talk_2021/
+https://gforsyth.github.io/xonsh_talk_2022/
 ---
 layout: false
 # Getting to know [me]
@@ -14,13 +14,11 @@ layout: false
   ## Who
 ]
 .right-column[
-Gil Forsyth, I work for a company*
+Gil Forsyth, I work for a company
 
 ![](./GitHub-Mark-32px.png) gforsyth
 
 Contributing and maintaining `xonsh` since 2015
-
-.footnote[.red[*] It's a good company, but unrelated to this talk and I'm here as my personal self]
 
 ]
 ---
@@ -36,7 +34,7 @@ Created by the inimitable Anthony Scopatz
 
 also: @adqm, @melund, @AstraLuma, @mitnk, @laloch, @anki-code, @jnoortheen, @blahgeek, @daniel-shimon and more!
 
-Current active maintainers: @daniel-shimon, @gforsyth
+Current active maintainers: @jnoortheen, @anki-code, @gforsyth
 
 How many users do we have?
 

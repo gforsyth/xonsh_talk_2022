@@ -17,7 +17,8 @@ echo @(cap) # more on this later
 2**32
 
 import requests
-requests.get("http://google.com")
+r = requests.get("http://google.com")
+r.status_code
 
 import numpy
 x = numpy.random.random((10, 10))
@@ -93,7 +94,10 @@ $PATH.reverse()
 $PATH
 $PATH.pop(0)
 $PATH
-$PATH.insert(0, "/opt/miniconda/bin")
+$PATH.insert(0, "/home/gil/.goenv/versions/1.17.0/bin/")
+$PATH.remove("/usr/bin")
+$PATH
+$PATH.insert(-4, "/usr/bin")
 ```
 
 Any env-var that ends in `PATH` gets treated this way, so `$LD_LIBRARY_PATH`, `$RPATH`, whatever
@@ -121,13 +125,13 @@ Which means we can use Python string methods!
 
 ```
 cap = $(ls)
-[x for x in cap.split() if "da" in x]
+[x for x in cap.split() if "or" in x]
 ```
 
 or maybe `grep` is simpler?  It's up to you!
 
 ```
-cap = $(ls | grep)
+cap = $(ls | grep or)
 cap.split()
 ```
 
@@ -152,12 +156,12 @@ cap.output
 And it's a truthy object! so you can use it for control flow:
 
 ```
-if !(ls | grep ICO):
-    print("There's an uppercase ICO in this directory")
-mv favicon.ico favicon.ICO
-if !(ls | grep ICO):
-    print("There's an uppercase ICO in this directory")
-mv favicon.ICO favicon.ico
+if !(ls | grep PNG):
+    print("There's an obnoxious file extension in this directory")
+mv sadtrombone.png sadtromebone.PNG
+if !(ls | grep PNG):
+    print("There's an obnoxious file extension in this directory")
+mv sadtrombone.PNG sadtromebone.png
 ```
 
 
@@ -215,8 +219,15 @@ mkdir "a dir with spaces"
 
 # Fun stuff
 ```
-with ${...}.swap({"PATH": $PATH[1:]}):
+with ${...}.swap({"PATH": $PATH[-5:]}):
     which python
+```
+
+```
+with cleanpath():
+    echo $PATH
+
+echo $PATH
 ```
 
 ```
@@ -249,8 +260,9 @@ $PROMPT_FIELDS
 
 import random
 $PROMPT_FIELDS["rand"] = lambda: random.randint(0, 50)
+oldprompt = $PROMPT
 $PROMPT += " {rand} "
-$PROMPT = $PROMPT[:-8]
+$PROMPT = oldprompt
 ```
 
 # If there's time
